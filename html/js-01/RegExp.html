@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+		
+
+		/**
+		 * - 正则表达式匹配字符串
+		 * 	- \ 在非特殊字符之前反斜杠表示下一个字符是特殊字符，不能按字面理解。
+		 * 		在特殊字符之前反斜杠标识下一个字符不是特殊字符，按字面理解。
+		 * 		如果要通过构造函数创建正则表达式，因为传递给构造函数的字符串中，反斜杠表示转义字符，所以要表示反斜杠得再前面加一个反斜杠
+		 */
+		//  \ 反斜杠用法
+/* 		var str = "a:\\ ";
+		var reg1 = /[a-z]\s/i;//var reg1 = new RegExp("[a-z]\\s","i")
+		var reg2 = /[a-z]:\\/i;//var reg1 = new RegExp("[a-z]:\\\\","i")
+		console.log(reg2.test(str)); */
+		
+		// ^ 匹配输入的开始
+/* 		var str = "afternoon";
+		var reg1 = /^a/i;//var reg1 = new RegExp("^a","i")
+		console.log(reg1.test(str)); */
+		
+		// $ 匹配输入的结束
+		/* var str = "afternoon";
+		var reg1 = /n$/i;
+		console.log(reg1.test(str)); */
+		
+		// * 匹配前一个表达式0次或多次,等价于{0,}
+		
+		// var str = "afternoon";
+		// var reg1 = /no*/i;
+		// console.log(reg1.test(str));
+		
+		
+		// + 匹配前一个表达式1次或多次,等价于{1,}
+		/* var str = "afternoon";
+		var reg1 = /no+/i;//reg1 = /no{1,}/i;
+		console.log(reg1.test(str)); */
+		
+		// ？ 匹配前面一个表达式0次或者1次，等价于{0,1}
+		/* var str = "afternoon";
+		var reg1 = /no?/i;
+		console.log(reg1.test(str)); */
+		
+		// . 默认匹配除换行符之外的任何单个字符
+		/* var str = "afternoon";
+		var reg1 = /noo./i;
+		console.log(reg1.test(str)); */
+		
+		// a|b 匹配a或者b
+		
+		/* var str = "afternoon";
+		var reg1 = /after|good/i;
+		console.log(reg1.test(str)); */	
+		
+		// {n} n是一个正整数，匹配前一个字符至少出现了n次。
+		/* var str = "afternoon";
+		var reg1 = /o{2}/i;
+		console.log(reg1.test(str)); */
+		
+		// {n,m} n 和 m 都是整数。匹配前面的字符至少n次，最多m次。如果 n 或者 m 的值是0， 这个值被忽略
+		/* var str = "afternoon";
+		var reg1 = /o{1,2}/i;
+		console.log(reg1.test(str)); */
+		
+		// [xyz] 一个字符集，匹配方括号中的任意字符，包括转义序列。可以使用破折号（-）来指定一个字符范围
+		
+		/* var str = "afternoon";
+		var reg1 = /[ano]o{1,2}/i;
+		console.log(reg1.test(str)); */
+		
+		// [^xyz] 一个反向字符集。也就是说， 它匹配任何没有包含在方括号中的字符。
+		var str = "afternoon";
+		var reg1 = /[^ano]t*/i;
+		console.log(reg1.test(str));
+		
+		
+		//一个匹配以a开头，以b结尾，中间字符随意的的正则表达式
+		var reg = /a.*b/
+		var str = "aasdfasdfgb"
+		
+		console.log(reg.test(str));
+		
+    </script>
+</body>
+</html>
